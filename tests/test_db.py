@@ -29,7 +29,7 @@ class DBConnectTest(unittest.TestCase):
                 now.strftime('%Y-%m-%d %H:%M:%S'))
 
     def test_get_latest_entry_pub_date(self):
-        actual = self.dbconnecter.get_latest_entry_pub_date()
+        actual = self.dbconnecter.get_latest_entry()
         self.assertTrue(actual)
 
 if __name__ == '__main__':

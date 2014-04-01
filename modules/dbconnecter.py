@@ -24,7 +24,7 @@ class DBConnecter(object):
                 latest_entry
                 )
 
-    def get_latest_entry_pub_date(self):
+    def get_latest_entry(self):
         self.cur.execute(
                 """SELECT title, link, MAX(pub_date) FROM entries"""
                 )

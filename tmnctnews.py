@@ -26,16 +26,13 @@ if __name__ == '__main__':
         pass
     
     try:
-        latest_localdata_pubdate = dbconnecter.get_latest_entry_pub_date()
+        latest_entry_of_localdata = dbconnecter.get_latest_entry()
     except:
-        pass
-    
-    if not latest_localdata_pubdate:
         dbconnecter.insert_entry(latest_entry_title, latest_entry_link, latest_entry_pubdate)
         bot.send_tweet(u"%s\n%s #苫小牧高専" % (latest_entry_title, latest_entry_link))
         sys.exit()
 
-    if latest_entry_pubdate > latest_localdata_pubdate:
+    if latest_entry_pubdate > latest_entry_of_localdata[2] and latest_entry_title is not latest_entry_of_localdata[0]:
         dbconnecter.insert_entry(latest_entry_title, latest_entry_link, latest_entry_pubdate)
         bot.send_tweet(u"%s\n%s #苫小牧高専" % (latest_entry_title, latest_entry_link))
 
