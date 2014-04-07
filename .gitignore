@@ -1,5 +1,11 @@
 venv
 *.pyc
+<<<<<<< HEAD
 *.db
 settings.py
+=======
+*.log
+settings.py
+*.dat
+>>>>>>> remake
 

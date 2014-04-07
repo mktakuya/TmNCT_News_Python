@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+<<<<<<< HEAD
 
 cd tests
 
@@ -10,4 +11,8 @@ echo "db test"
 
 echo "twitter oauth test"
 ./test_twitter_oauth.py
+=======
+cd tests
+./test_tmnct_reporter.py
+>>>>>>> remake
 
