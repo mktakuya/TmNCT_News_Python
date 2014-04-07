@@ -27,7 +27,11 @@ class TmNCTReporter(object):
         except IOError:
             pass
 
-        self.local_data = pickle.load(fp)
+        try:
+            self.local_data = pickle.load(fp)
+        except:
+            return True
+
         fp.close()
 
         if self.latest_news[2] > self.local_data[2]:
