@@ -9,5 +9,8 @@ class TweetMan(object):
         self.api = tweepy.API(auth)
 
     def send_tweet(self, tweet, in_reply_status_id = None):
-        self.api.update_status(tweet, in_reply_status_id)
+        try:
+            self.api.update_status(tweet, in_reply_status_id)
+        except:
+            return False
 
