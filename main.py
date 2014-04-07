@@ -20,7 +20,7 @@ if __name__ == '__main__':
         reporter.save_latest_news()
         tweetman = TweetMan(settings.CONSUMER_KEY, settings.CONSUMER_SECRET,
                 settings.ACCESS_TOKEN, settings.ACCESS_TOKEN_SECRET)
-        tweet = u"{0}\n{1} #苫小牧高専 test2".format(reporter.latest_news[0],
+        tweet = u"{0}\n{1} #苫小牧高専".format(reporter.latest_news[0],
                 reporter.latest_news[1])
         tweetman.send_tweet(tweet)
         logger.write(u"completed send_tweet!\n")
