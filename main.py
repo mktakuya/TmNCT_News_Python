@@ -23,6 +23,7 @@ if __name__ == '__main__':
         tweet = u"{0}\n{1} #苫小牧高専 test2".format(reporter.latest_news[0],
                 reporter.latest_news[1])
         tweetman.send_tweet(tweet)
+        logger.write(u"completed send_tweet!\n")
     else:
         logger.write('Not Updated...\n')
 
