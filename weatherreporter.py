@@ -27,7 +27,7 @@ if __name__ == '__main__':
             area = settings.WEATHER_AREA_NAME, weather = today_weather,
             max_temp = today_max_temperature, min_temp = today_min_temperature)
 
-    if tweetman.send_tweet(tweet):
+    if tweetman.send_tweet(tweet) is not False:
         logger.write(u"conpleted send_tweet!\n")
     else:
         logger.write(u"send_tweet missing...\n")
