@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 cd ~/apps/TmNCT_News/
-./main.py
+
+case $1 in
+    main) ./main.py;;
+    weather) ./weatherreporter.py
+esac
 
